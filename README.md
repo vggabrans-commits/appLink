@@ -9,14 +9,23 @@ HOW TO TEST IT .
 
 
 inputUrl           : https://chililabs.io/
+
 finalUrl           : https://chililabs.io/
+
 redirects          : {}
+
 thirdPartyRequests : 4
+
 thirdPartyDomains  : {googletagmanager.com, clarity.ms}
+
 title              : Mobile App Development company | Award-winning apps | Chili Labs
+
 initialStatus      : 200
+
 requestCount       : 54
+
 responseCount      : 46
+
 requests           : {@{url=https://chililabs.io/; method=GET; resourceType=document; domain=chililabs.io; thirdParty=False}, 
                      @{url=https://chililabs.io/_next/static/css/c39f18cdca1206f3.css; method=GET; resourceType=stylesheet; domain=chililabs.io; 
                      thirdParty=False}, @{url=https://chililabs.io/_next/static/css/706e79a094b4a8e8.css; method=GET; resourceType=stylesheet; 
