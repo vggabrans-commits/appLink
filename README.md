@@ -6,6 +6,8 @@ HOW TO TEST IT .
    3.2) PS C:\Users\zlavi\OneDrive\Desktop\appLink\server> node server.js
 4) Second terminal  Invoke-RestMethod -Uri "http://localhost:3000/api/analyze" -Method POST -ContentType "application/json" -Body '{"url":"Invoke-RestMethod -Uri "http://localhost:3000/api/analyze" -Method POST -ContentType "application/json" -Body '{"url":"https://chililabs.io/"}'
 5) YOU MUST GET THIS DATA
+
+
 inputUrl           : https://chililabs.io/
 finalUrl           : https://chililabs.io/
 redirects          : {}
