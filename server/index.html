@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Privacy Link Guard</title>
+
+<link
+    rel="stylesheet"
+    href="index.css"
+>
+
+
+</head>
+
+<body>
+
+<main class="container">
+
+    <header>
+
+        <div class="logo">
+            PRIVACY LINK GUARD
+        </div>
+
+        <div class="subtitle">
+            Check a link before you open it
+        </div>
+
+    </header>
+
+
+    <section class="scanner">
+
+        <input
+            class="data_input"
+            type="text"
+            placeholder="Paste a link here..."
+            autocomplete="off"
+        >
+
+        <button class="start">
+            ANALYZE LINK
+        </button>
+
+    </section>
+
+
+    <section class="results">
+
+        <div class="result_box">
+
+            <div class="result_title">
+                SECURITY
+            </div>
+
+            <div
+                class="result_score"
+                id="securityScore"
+            >
+                —
+            </div>
+
+            <div
+                class="risk_label"
+                id="securityRisk"
+            >
+                Waiting
+            </div>
+
+        </div>
+
+
+        <div class="result_box">
+
+            <div class="result_title">
+                PRIVACY
+            </div>
+
+            <div
+                class="result_score"
+                id="privacyScore"
+            >
+                —
+            </div>
+
+            <div
+                class="risk_label"
+                id="privacyRisk"
+            >
+                Waiting
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="analysis">
+
+        <h2>
+            LINK INFORMATION
+        </h2>
+
+
+        <div class="info">
+
+            <span>DOMAIN</span>
+
+            <span id="domain">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="info">
+
+            <span>PROTOCOL</span>
+
+            <span id="protocol">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="info">
+
+            <span>TRACKING PARAMETERS</span>
+
+            <span id="tracking">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="info">
+
+            <span>SHORT URL</span>
+
+            <span id="shortUrl">
+                —
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <section class="threats">
+
+        <h2>
+            DETECTION
+        </h2>
+
+
+        <div id="detections">
+
+            <div class="detection neutral">
+                No analysis performed yet
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="status">
+
+        <span>
+            STATUS:
+        </span>
+
+        <span id="status">
+            Waiting for link
+        </span>
+
+    </section>
+
+</main>
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
+
+

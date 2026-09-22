@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+
+min-height: 100vh;
+
+background: rgb(33, 92, 202);
+
+font-family: Arial, sans-serif;
+
+color: #111;
+
+}
+
+.container {
+
+
+width: 90%;
+
+max-width: 700px;
+
+margin: 60px auto;
+
+}
+
+header {
+
+
+text-align: center;
+
+color: white;
+
+}
+
+.logo {
+
+
+font-size: 32px;
+
+font-weight: bold;
+
+letter-spacing: 1px;
+
+
+}
+
+.subtitle {
+
+
+margin-top: 12px;
+
+font-size: 17px;
+
+opacity: 0.9;
+
+
+}
+
+/*
+
+# SCANNER
+
+*/
+
+.scanner {
+margin-top: 40px;
+
+}
+
+.data_input {
+
+
+width: 100%;
+
+height: 50px;
+
+padding: 0 16px;
+
+border: none;
+
+border-radius: 8px;
+
+font-size: 16px;
+
+outline: none;
+
+
+}
+
+.start {
+
+
+display: block;
+
+margin: 15px auto 0;
+
+padding: 13px 30px;
+
+border: none;
+
+border-radius: 8px;
+
+background: white;
+
+font-size: 15px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+}
+
+.start:hover {
+
+
+opacity: 0.9;
+
+}
+
+/*
+
+# SCORES
+
+*/
+
+.results {
+
+
+display: flex;
+
+justify-content: center;
+
+gap: 20px;
+
+margin-top: 40px;
+
+
+}
+
+.result_box {
+
+
+width: 50%;
+
+padding: 25px;
+
+background: white;
+
+border-radius: 12px;
+
+text-align: center;
+
+
+}
+
+.result_title {
+font-size: 16px;
+font-weight: bold;
+}
+
+.result_score {
+margin-top: 10px;
+
+font-size: 36px;
+
+font-weight: bold;
+}
+
+.risk_label {
+
+
+margin-top: 8px;
+
+font-size: 14px;
+
+
+}
+
+/*
+
+# ANALYSIS
+
+*/
+
+.analysis,
+.threats {
+
+
+margin-top: 25px;
+
+padding: 25px;
+
+background: white;
+
+border-radius: 12px;
+
+
+}
+
+.analysis h2,
+.threats h2 {
+
+
+margin-top: 0;
+
+font-size: 18px;
+
+
+}
+
+.info {
+
+
+display: flex;
+
+justify-content: space-between;
+
+gap: 20px;
+
+padding: 13px 0;
+
+border-bottom: 1px solid #ddd;
+
+font-size: 14px;
+
+
+}
+
+.info:last-child {
+
+
+border-bottom: none;
+
+
+}
+
+.info span:last-child {
+
+
+font-weight: bold;
+
+text-align: right;
+
+word-break: break-word;
+
+
+}
+
+/*
+
+# DETECTION
+
+*/
+
+.detection {
+
+
+padding: 13px;
+
+margin-top: 10px;
+
+border-radius: 7px;
+
+font-size: 14px;
+
+
+}
+
+.detection.safe {
+
+
+background: #e8f7e8;
+
+
+}
+
+.detection.warning {
+
+
+background: #fff4d6;
+
+
+}
+
+.detection.danger {
+
+
+background: #ffe2e2;
+
+
+}
+
+.detection.neutral {
+
+
+background: #eeeeee;
+
+
+}
+
+/*
+
+# STATUS
+
+*/
+.status {
+
+margin-top: 20px;
+
+color: white;
+
+text-align: center;
+
+font-size: 13px;
+
+
+}
+
+@media (max-width: 500px) {
+
+
+.container {
+
+    width: 94%;
+
+    margin-top: 35px;
+
+}
+
+
+.logo {
+
+    font-size: 25px;
+
+}
+
+
+.results {
+
+    gap: 10px;
+
+}
+
+
+.result_box {
+
+    padding: 18px 10px;
+
+}
+
+
+.result_score {
+
+    font-size: 28px;
+
+}
+
+
+}
