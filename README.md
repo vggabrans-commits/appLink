@@ -31,17 +31,29 @@ Keep this terminal running.
 
 Open the second PowerShell terminal and run:
    Invoke-RestMethod -Uri "http://localhost:3000/api/analyze" -Method POST -ContentType "application/json" -Body '{"url":"https://chililabs.io/"}'
+   
 The application will open the URL using Playwright and analyze its network activity.
+
 5. Expected result
+
 inputUrl : https://chililabs.io/ 
+
 finalUrl : https://chililabs.io/ 
+
 redirects : {} 
+
 thirdPartyRequests : 4 
+
 thirdPartyDomains : {googletagmanager.com, clarity.ms} 
+
 title : Mobile App Development company | Award-winning apps | Chili Labs 
+
 initialStatus : 200 
+
 requestCount : 54 
+
 responseCount : 46
+
 The response also contains detailed information about individual network requests and responses.
 
 Example request:
