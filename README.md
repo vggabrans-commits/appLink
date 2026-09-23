@@ -1,38 +1,85 @@
-HOW TO TEST IT .
-1) OPEN ,,server,, folder
-2) Open Two separate terminals
-3) First terminal type
-   3.1) PS C:\Users\zlavi\OneDrive\Desktop\appLink> cd .\server
-   3.2) PS C:\Users\zlavi\OneDrive\Desktop\appLink\server> node server.js
-4) Second terminal  Invoke-RestMethod -Uri "http://localhost:3000/api/analyze" -Method POST -ContentType "application/json" -Body '{"url":"Invoke-RestMethod -Uri "http://localhost:3000/api/analyze" -Method POST -ContentType "application/json" -Body '{"url":"https://chililabs.io/"}'
-5) YOU MUST GET THIS DATA
+HOW TO TEST IT
+1. Open the server folder
 
+Open the project folder and navigate to:
 
-inputUrl           : https://chililabs.io/
+appLink/server
+2. Open two separate PowerShell terminals
 
-finalUrl           : https://chililabs.io/
+You will need two terminals:
 
-redirects          : {}
+Terminal 1: start the backend server
+Terminal 2: send a test request
 
-thirdPartyRequests : 4
+3. Start the backend
 
-thirdPartyDomains  : {googletagmanager.com, clarity.ms}
+In the first terminal & ENTER:
 
-title              : Mobile App Development company | Award-winning apps | Chili Labs
+   cd .\server
 
-initialStatus      : 200
+Then run:
 
-requestCount       : 54
+   node server.js
 
-responseCount      : 46
+You should see:
 
-requests           : {@{url=https://chililabs.io/; method=GET; resourceType=document; domain=chililabs.io; thirdParty=False}, 
-                     @{url=https://chililabs.io/_next/static/css/c39f18cdca1206f3.css; method=GET; resourceType=stylesheet; domain=chililabs.io; 
-                     thirdParty=False}, @{url=https://chililabs.io/_next/static/css/706e79a094b4a8e8.css; method=GET; resourceType=stylesheet; 
-                     domain=chililabs.io; thirdParty=False}, @{url=https://chililabs.io/_next/static/chunks/8711-28c88f34dabe6723.js; 
-                     method=GET; resourceType=script; domain=chililabs.io; thirdParty=False}...}
-responses          : {@{url=https://chililabs.io/; status=200; contentType=text/html; charset=utf-8}, 
-                     @{url=https://chililabs.io/_next/static/css/c39f18cdca1206f3.css; status=200; contentType=text/css; charset=UTF-8}, 
-                     @{url=https://chililabs.io/_next/static/css/706e79a094b4a8e8.css; status=200; contentType=text/css; charset=UTF-8}, 
-                     @{url=https://chililabs.io/_next/static/chunks/8711-28c88f34dabe6723.js; status=200; contentType=application/javascript; 
-                     charset=UTF-8}...} 
+   Privacy Link Guard backend running on http://localhost:3000
+
+Keep this terminal running.
+
+4. Send a URL for analysis
+
+Open the second PowerShell terminal and run:
+   Invoke-RestMethod -Uri "http://localhost:3000/api/analyze" -Method POST -ContentType "application/json" -Body '{"url":"https://chililabs.io/"}'
+The application will open the URL using Playwright and analyze its network activity.
+5. Expected result
+inputUrl : https://chililabs.io/ 
+finalUrl : https://chililabs.io/ 
+redirects : {} 
+thirdPartyRequests : 4 
+thirdPartyDomains : {googletagmanager.com, clarity.ms} 
+title : Mobile App Development company | Award-winning apps | Chili Labs 
+initialStatus : 200 
+requestCount : 54 
+responseCount : 46
+The response also contains detailed information about individual network requests and responses.
+
+Example request:
+
+url          : https://chililabs.io/
+method       : GET
+resourceType : document
+domain       : chililabs.io
+thirdParty   : False
+
+Example response:
+
+url         : https://chililabs.io/
+status      : 200
+contentType : text/html; charset=utf-8
+
+The complete response includes:
+
+   inputUrl
+   finalUrl
+   redirects
+   thirdPartyRequests
+   thirdPartyDomains
+   title
+   initialStatus
+   requestCount
+   responseCount
+   requests
+   responses
+
+What the demo shows
+Privacy Link Guard currently demonstrates how a URL can be analyzed by:
+
+1. Opening the target website in an automated browser.
+2. Following redirects.
+3. Monitoring network requests.
+4. Identifying third-party domains.
+5. Recording HTTP responses and status codes.
+6. Returning the collected information as structured JSON.
+Note: Privacy Link Guard is currently a prototype/demo. The results should not be considered a complete security or privacy assessment of a website.
+
