@@ -94,5 +94,6 @@ Privacy Link Guard currently demonstrates how a URL can be analyzed by:
 4. Identifying third-party domains.
 5. Recording HTTP responses and status codes.
 6. Returning the collected information as structured JSON.
+
 Note: Privacy Link Guard is currently a prototype/demo. The results should not be considered a complete security or privacy assessment of a website.
 
